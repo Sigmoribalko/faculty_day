@@ -32,20 +32,17 @@ fun calculate(a: Double, b: Double, operation: OperationType = OperationType.ADD
 @Suppress("ReturnCount")
 fun String.calculate(): Double? {
     val sumbls = this.split(" ")
-    
     if (sumbls.size != 3) return null
-    
-    val aTemp = sumbls[0].toDoubleOrNull()
-    if (aTemp == null) {
+    val a = sumbls[0].toDoubleOrNull()
+    if (a == null) {
         return null
     }
-    val a = aTemp
-    
-    val bTemp = sumbls[2].toDoubleOrNull()
-    if (bTemp == null) {
+    val first = a
+    val b = sumbls[2].toDoubleOrNull()
+    if (b == null) {
         return null
     }
-    val b = bTemp
+    val sec = b
     
     val operation = when (sumbls[1]) {
         "+" -> OperationType.ADD
@@ -54,5 +51,5 @@ fun String.calculate(): Double? {
         "/" -> OperationType.DIVIDE
         else -> return null
     }
-    return calculate(a, b, operation)
+    return calculate(first, sec, operation)
 }
