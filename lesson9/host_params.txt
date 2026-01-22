@@ -1,0 +1,2 @@
+faculty_day/lesson9/logs/config/app.conf:host=localhost
+faculty_day/lesson9/logs/config/db.conf:host=127.0.0.1
