@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: lesson1
+
+app:
+  info:
+    name: "Spring-Service-2026"
+    version: "4.0.1"
+    features: ["Kotlin", "Coroutines", "Native-Image"]
+
+greeting: Adios
